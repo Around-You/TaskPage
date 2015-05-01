@@ -9,32 +9,56 @@
 <script src="jquery.mobile-1.4.5.min.js"></script>
 <style>
 .noshadow * {
-	-webkit-box-shadow: none !important;
-	-moz-box-shadow: none !important;
-	box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
 }
 </style>
 </head>
 <body>
-	<div data-role="page" data-control-title="" id="page1"
-		class="ui-page-theme-a noshadow">
-		<!-- /panel -->
-		<div data-theme="a" data-role="header">
-			<h1>任务详情</h1>
-			<a href="#" data-rel="back"
-				class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-left ui-btn-icon-notext">
-			</a>
-		</div>
-		<!-- /header -->
-		<div class="ui-content" role="main">
-			<div class="ui-body">
-			任务提交成功！
-			</div>
-		</div>
-		<div data-theme="a" data-role="footer" data-position="fixed">
-			<h4 style="display: none;">Footer</h4>
+    <div data-role="page" data-control-title="" id="page1"
+        class="ui-page-theme-a noshadow">
+        <!-- /panel -->
+        <div data-theme="a" data-role="header">
+            <h1>发布任务</h1>
+            <a href="#" data-rel="back"
+                class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-left ui-btn-icon-notext">
+            </a>
+        </div>
+        <!-- /header -->
+        <div class="ui-content" role="main">
+            <form action="">
+                <div class="ui-field-contain">
+                    <fieldset data-role="controlgroup">
+                        <legend>任务种类:</legend>
+                        <input type="radio" name="type[takeout]" id="type-takeout" value="1" checked="checked">
+                        <label for="type-takeout">外卖</label>
+                        <input type="radio" name="type[package]" id="type-package" value="2" >
+                        <label for="type-package">快递</label>
+                        <input type="radio" name="type[other]" id="type-other" value="3" >
+                        <label for="type-other">其他</label>
+                    </fieldset>
+                </div>
+                <div class="ui-field-contain">
+                    <label for="textinput-fc">任务标题:</label> <input type="text"
+                        name="title" id="title" placeholder="找人帮忙取快递" value="">
+                </div>
+                <div class="ui-field-contain">
+                    <label for="textinput-fc">任务详情:</label>
+                    <textarea cols="40" rows="8" name="textarea-12" id="textarea-12"
+                        placeholder="取申通快递，下午一点送到男宿1号楼8015"></textarea>
+                </div>
+                <div class="ui-field-contain">
+                    <label for="textinput-fc">联系电话:</label> <input type="text"
+                        name="title" id="title" placeholder="12312341234" value="">
+                </div>
+                <a href="addTaskSuccess.html" data-transition="fade" class="ui-btn ui-corner-all">提交任务</a>
+            </form>
+        </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <h4 style="display: none;">Footer</h4>
 
-		</div>
-	</div>
+        </div>
+    </div>
 </body>
 </html>

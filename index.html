@@ -21,8 +21,8 @@
 		<!-- /panel -->
 		<div data-theme="a" data-role="header">
 			<h1>任务详情</h1>
-			<a href="#" data-rel="back"
-				class="ui-btn ui-corner-all ui-icon-user ui-btn-icon-left ui-btn-icon-notext">
+			<a href="#sidebar" 
+				class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">
 			</a>
 		</div>
 		<!-- /header -->
@@ -70,6 +70,14 @@
 			<h4 style="display: none;">Footer</h4>
 
 		</div>
+		<div data-role="panel" data-display="overlay" id="sidebar">
+    <h3>个人中心</h3>
+    <ul data-role="listview">
+    <li data-icon="bullets" ><a href="#">我的任务</a></li>
+    <li data-icon="user" ><a href="#">我的账户</a></li>
+    <li data-icon="gear"><a href="#">设置</a></li>
+    </ul>
+</div><!-- /panel -->
 	</div>
 </body>
 </html>
